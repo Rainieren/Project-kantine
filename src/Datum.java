@@ -23,18 +23,6 @@ public class Datum {
 	
 	public boolean bestaatDatum(int dag, int maand, int jaar){
 
-		return checkDatum(dag, maand, jaar);
-	}
-
-	/**
-	 *	Checkt of de dag groter is dan 1, maand niet groter dan 12 en jaar tussen de 1900 en 2100 zit.
-	 * @param dag
-	 * @param maand
-	 * @param jaar
-	 * @return
-	 */
-	public boolean checkDatum(int dag, int maand, int jaar) {
-
 		if(checkMonth(maand).equals("longMonth") && dag <= 31) {
 			return true;
 		} else if (isLeapYear(jaar) && checkMonth(maand).equals("leapYear") && dag <= 29) {
@@ -46,6 +34,7 @@ public class Datum {
 		} else {
 			return false;
 		}
+
 	}
 
 	/**
@@ -100,7 +89,6 @@ public class Datum {
 	 */
 	public static String getDatumAsString() {
 		// TODO
-		return "";
 	}
 
 	/**
