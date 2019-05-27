@@ -15,6 +15,7 @@ public class Dienblad {
     }
 
     public Dienblad(Persoon klant) {
+
         this.klant = klant;
     }
 

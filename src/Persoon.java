@@ -47,6 +47,7 @@ public class Persoon {
      * @return
      */
     public String getGeboortedatum() {
+
         return Datum.getDatumAsString();
     }
 

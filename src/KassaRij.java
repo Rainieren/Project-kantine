@@ -9,6 +9,7 @@ public class KassaRij {
      * Constructor
      */
     public KassaRij() {
+
         this.klanten = new LinkedList<>();
     }
 
@@ -18,6 +19,7 @@ public class KassaRij {
      * @param klant
      */
     public void sluitAchteraan(Dienblad klant) {
+
         klanten.add(klant);
     }
 

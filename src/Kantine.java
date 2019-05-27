@@ -18,14 +18,20 @@ public class Kantine {
      * Persoon zich aan bij de rij voor de kassa.
      */
     public void loopPakSluitAan() {
-        // method body omitted
+        Persoon klant = new Persoon();
+        Dienblad dienblad = new Dienblad(klant);
+        Artikel banaan = new Artikel();
+        Artikel cola = new Artikel();
+        dienblad.voegToe(banaan);
+        dienblad.voegToe(cola);
+        KassaRij.sluitAchteraan(dienblad, klant);
     }
 
     /**
      * Deze methode handelt de rij voor de kassa af.
      */
     public void verwerkRijVoorKassa() {
-        while() {
+        while(KassaRij.erIsEenRij();) {
             // omitted
         }
     }
@@ -53,6 +59,6 @@ public class Kantine {
      * het aantal artikelen en "leegt" de inhoud van de kassa.
      */
     public void resetKassa() {
-        return resetKassa();
+        resetKassa();
     }
 }
