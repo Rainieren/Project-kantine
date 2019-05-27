@@ -5,12 +5,14 @@ import java.util.Queue;
 public class KassaRij {
 
     private Queue<Dienblad> klanten;
+    private LinkedList<Persoon> klant;
     /**
      * Constructor
      */
     public KassaRij() {
 
         this.klanten = new LinkedList<>();
+        this.klant = new LinkedList<>();
     }
 
     /**

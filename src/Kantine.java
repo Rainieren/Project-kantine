@@ -42,7 +42,8 @@ public class Kantine {
      * @return hoeveelheid geld in kassa
      */
     public double hoeveelheidGeldInKassa() {
-       return hoeveelheidGeldInKassa();
+
+        return hoeveelheidGeldInKassa();
     }
 
     /**
@@ -51,6 +52,7 @@ public class Kantine {
      * @return het aantal gepasseerde artikelen
      */
     public int aantalArtikelen() {
+
         return aantalArtikelen();
     }
 
@@ -59,6 +61,7 @@ public class Kantine {
      * het aantal artikelen en "leegt" de inhoud van de kassa.
      */
     public void resetKassa() {
+
         resetKassa();
     }
 }

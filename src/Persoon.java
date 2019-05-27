@@ -2,20 +2,24 @@ import java.lang.reflect.GenericArrayType;
 
 public class Persoon {
 
-    private int BurgerServiceNummer;
+    private int burgerServiceNummer;
     private String voornaam;
     private String achternaam;
     private Datum geboortedatum;
     private char geslacht;
 
-    public Persoon(int BurgerServiceNummer, String voornaam, Datum geboortedatum, char geslacht) {
+    public Persoon(int burgerServiceNummer, String voornaam, String achternaam, Datum geboortedatum, char geslacht) {
+        this();
         checkGeslacht(geslacht);
     }
 
     // Opdracht 3. C (Laatste dot) nog onduidelijk.
     public Persoon() {
-        Datum geboortedatum = null;
-        char geslacht = '0';
+        geboortedatum = null;
+        geslacht = '0';
+        voornaam = "Onbekend";
+        achternaam = "Onbekend";
+        burgerServiceNummer = 0;
     }
 
     /**
@@ -38,7 +42,7 @@ public class Persoon {
     }
 
     public String toString() {
-        return "BSN: " + BurgerServiceNummer + " , " + voornaam + " " + achternaam + " Geboortedatum: " + geboortedatum + " geslacht: " + geslacht;
+        return "BSN: " + burgerServiceNummer + " , " + voornaam + " " + achternaam + " Geboortedatum: " + geboortedatum + " geslacht: " + geslacht;
     }
 
 
@@ -56,7 +60,7 @@ public class Persoon {
      * @return
      */
     public int getBurgerServiceNummer() {
-        return BurgerServiceNummer;
+        return burgerServiceNummer;
     }
 
     /**
@@ -88,7 +92,7 @@ public class Persoon {
      * @param burgerServiceNummer
      */
     public void setBurgerServiceNummer(int burgerServiceNummer) {
-        this.BurgerServiceNummer = burgerServiceNummer;
+        this.burgerServiceNummer = burgerServiceNummer;
     }
 
     /**
