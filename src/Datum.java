@@ -87,8 +87,8 @@ public class Datum {
 	 * Getter voor Sting weergave van datum
 	 * @return Geboortedatum
 	 */
-	public static String getDatumAsString() {
-		// TODO
+	public String getDatumAsString() {
+		return dag + "-" + maand + "-" + jaar;
 	}
 
 	/**
