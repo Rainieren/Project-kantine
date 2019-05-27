@@ -8,6 +8,7 @@ public class KantineSimulatie {
      * Constructor
      */
     public KantineSimulatie() {
+
         kantine = new Kantine();
     }
 
@@ -31,10 +32,11 @@ public class KantineSimulatie {
             }
 
             // verwerk rij voor de kassa
-
+            Kantine.verwerkRijVoorKassa();
             // toon dagtotalen (artikelen en geld in kassa)
-
+            Kantine.hoeveelheidGeldInKassa();
             // reset de kassa voor de volgende dag
+            Kantine.resetKassa();
         }
     }
 
@@ -50,6 +52,6 @@ public class KantineSimulatie {
             dagen = Integer.parseInt(args[0]);
         }
 
-        simulate(dagen);
+        simuleer(dagen);
     }
 }
