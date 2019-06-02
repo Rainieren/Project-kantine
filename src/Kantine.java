@@ -21,11 +21,21 @@ public class Kantine {
     public void loopPakSluitAan() {
         Persoon klant = new Persoon();
         Dienblad dienblad = new Dienblad(klant);
+        klant.pakDienblad(dienblad);
         Artikel banaan = new Artikel();
         Artikel cola = new Artikel();
         dienblad.voegToe(banaan);
         dienblad.voegToe(cola);
         KassaRij.sluitAchteraan(klant);
+    }
+
+    public void loopPakSluitAan(Persoon persoon, String[] artikelnamen){
+        Dienblad dienblad = new Dienblad();
+        persoon.pakDienblad(dienblad);
+        for(String artikelnaam : artikelnamen){
+            dienblad.voegToe(kantineAanbod.getArtikel(artikelnaam));
+        }
+        this.kassarij.sluitAchteraan(persoon);
     }
 
     /**
@@ -39,7 +49,7 @@ public class Kantine {
 
 
     public Kassa getKassa(){
-        return kassa;
+        return this.kassa;
     }
 
     public void setKantineAanbod(){
@@ -47,6 +57,6 @@ public class Kantine {
     }
 
     public KantineAanbod getKantineAanbod() {
-        return kantineAanbod;
+        return this.kantineAanbod;
     }
 }

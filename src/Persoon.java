@@ -8,6 +8,8 @@ public class Persoon {
     private Datum geboortedatum;
     private char geslacht;
 
+    private Dienblad dienblad;
+
     public Persoon(int burgerServiceNummer, String voornaam, String achternaam, Datum geboortedatum, char geslacht) {
         this();
         checkGeslacht(geslacht);
@@ -117,6 +119,16 @@ public class Persoon {
         }
 
     }
+
+    /**
+     * Methode om dienblad te koppelen aan een persoon
+     *
+     * @param dienblad
+     */
+    public void pakDienblad(Dienblad dienblad){
+        this.dienblad = dienblad;
+    }
+
 
     /**
      *
