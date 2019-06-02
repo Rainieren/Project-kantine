@@ -15,6 +15,8 @@ public class KassaRij {
         this.klant = new LinkedList<>();
     }
 
+
+
     /**
      * Persoon sluit achter in de rij aan
      *

@@ -2,6 +2,7 @@ public class Kantine {
 
     private Kassa kassa;
     private KassaRij kassarij;
+    private KantineAanbod kantineAanbod;
 
     /**
      * Constructor
@@ -24,7 +25,7 @@ public class Kantine {
         Artikel cola = new Artikel();
         dienblad.voegToe(banaan);
         dienblad.voegToe(cola);
-        KassaRij.sluitAchteraan(dienblad, klant);
+        KassaRij.sluitAchteraan();
     }
 
     /**
@@ -36,32 +37,16 @@ public class Kantine {
         }
     }
 
-    /**
-     * Deze methode telt het geld uit de kassa
-     *
-     * @return hoeveelheid geld in kassa
-     */
-    public double hoeveelheidGeldInKassa() {
 
-        return hoeveelheidGeldInKassa();
+    public Kassa getKassa(){
+        return kassa;
     }
 
-    /**
-     * Deze methode geeft het aantal gepasseerde artikelen.
-     *
-     * @return het aantal gepasseerde artikelen
-     */
-    public int aantalArtikelen() {
-
-        return aantalArtikelen();
+    public void setKantineAanbod(){
+        this.kantineAanbod = kantineAanbod;
     }
 
-    /**
-     * Deze methode reset de bijgehouden telling van
-     * het aantal artikelen en "leegt" de inhoud van de kassa.
-     */
-    public void resetKassa() {
-
-        resetKassa();
+    public KantineAanbod getKantineAanbod() {
+        return kantineAanbod;
     }
 }
