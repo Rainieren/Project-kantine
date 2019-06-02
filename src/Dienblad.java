@@ -16,7 +16,7 @@ public class Dienblad {
 
     public Dienblad(Persoon klant) {
 
-        this.klant = klant;
+        artikelen = new Stack<Artikel>();
     }
 
     /**
@@ -25,7 +25,8 @@ public class Dienblad {
      * @param artikel
      */
     public void voegToe(Artikel artikel) {
-        artikelen.add(artikel);
+
+        artikelen.push(artikel);
     }
 
     /**
@@ -50,12 +51,9 @@ public class Dienblad {
         return totaalprijs;
     }
 
-    public void setKlant(){
-        this.klant = klant;
+    public Iterator<Artikel> iterator(){
+        return this.artikelen.iterator();
     }
 
-    public Persoon getKlant(){
-        return klant;
-    }
 }
 

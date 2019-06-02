@@ -12,7 +12,7 @@ public class KassaRij {
     public KassaRij() {
 
         this.klanten = new LinkedList<>();
-        this.klant = new LinkedList<>();
+        this.klant = new LinkedList<Persoon>();
     }
 
 
@@ -24,7 +24,7 @@ public class KassaRij {
      */
     public void sluitAchteraan(Dienblad klant) {
 
-        klanten.add(klant);
+        this.klanten.add(klant);
     }
 
     /**
