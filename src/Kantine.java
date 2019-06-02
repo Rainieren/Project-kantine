@@ -25,7 +25,7 @@ public class Kantine {
         Artikel cola = new Artikel();
         dienblad.voegToe(banaan);
         dienblad.voegToe(cola);
-        KassaRij.sluitAchteraan();
+        KassaRij.sluitAchteraan(klant);
     }
 
     /**
@@ -33,7 +33,7 @@ public class Kantine {
      */
     public void verwerkRijVoorKassa() {
         while(KassaRij.erIsEenRij();) {
-            // omitted
+            this.kassa.rekenAf(this.kassarij.eerstePersoonInRij());
         }
     }
 
