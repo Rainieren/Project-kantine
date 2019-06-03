@@ -26,36 +26,51 @@ public class Kantine {
         Artikel cola = new Artikel();
         dienblad.voegToe(banaan);
         dienblad.voegToe(cola);
-        KassaRij.sluitAchteraan(klant);
+        kassarij.sluitAchteraan(dienblad);
     }
 
+    /**
+     *
+     * @param persoon
+     * @param artikelnamen
+     */
     public void loopPakSluitAan(Persoon persoon, String[] artikelnamen){
         Dienblad dienblad = new Dienblad();
         persoon.pakDienblad(dienblad);
         for(String artikelnaam : artikelnamen){
             dienblad.voegToe(kantineAanbod.getArtikel(artikelnaam));
         }
-        this.kassarij.sluitAchteraan(persoon);
+        this.kassarij.sluitAchteraan(dienblad);
     }
 
     /**
      * Deze methode handelt de rij voor de kassa af.
      */
     public void verwerkRijVoorKassa() {
-        while(KassaRij.erIsEenRij();) {
+        while(kassarij.erIsEenRij()) {
             this.kassa.rekenAf(this.kassarij.eerstePersoonInRij());
         }
     }
 
-
+    /**
+     *
+     * @return
+     */
     public Kassa getKassa(){
         return this.kassa;
     }
 
+    /**
+     *
+     */
     public void setKantineAanbod(){
         this.kantineAanbod = kantineAanbod;
     }
 
+    /**
+     *
+     * @return
+     */
     public KantineAanbod getKantineAanbod() {
         return this.kantineAanbod;
     }

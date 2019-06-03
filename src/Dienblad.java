@@ -52,6 +52,7 @@ public class Dienblad {
     }
 
     public Iterator<Artikel> iterator(){
+
         return this.artikelen.iterator();
     }
 

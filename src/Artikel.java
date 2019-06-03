@@ -8,14 +8,14 @@ public class Artikel {
 
     // Initialsing string name and price of the product.
     private String name;
-    private int price;
+    private double price;
 
     /**
      *
      * @param name Name of the product
      * @param price Price of the product
      */
-    public Artikel(String name, int price) {
+    public Artikel(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -40,7 +40,7 @@ public class Artikel {
      *
      * @return price
      */
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

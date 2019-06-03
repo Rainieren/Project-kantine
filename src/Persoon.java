@@ -54,7 +54,7 @@ public class Persoon {
      */
     public String getGeboortedatum() {
 
-        return Datum.getDatumAsString();
+        return geboortedatum.getDatumAsString();
     }
 
     /**
