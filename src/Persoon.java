@@ -15,7 +15,7 @@ public class Persoon {
         checkGeslacht(geslacht);
     }
 
-    // Opdracht 3. C (Laatste dot) nog onduidelijk.
+
     public Persoon() {
         geboortedatum = null;
         geslacht = '0';
