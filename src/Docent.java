@@ -11,10 +11,10 @@ public class Docent extends Persoon {
      * @param achternaam
      * @param geboortedatum
      * @param geslacht
-     * @param studentNummer
-     * @param studieRichting
+     * @param afkorting
+     * @param afdeling
      */
-    public Docent(int bsn, String voornaam, String achternaam, Datum geboortedatum, char geslacht, int studentNummer, String studieRichting) {
+    public Docent(int bsn, String voornaam, String achternaam, Datum geboortedatum, char geslacht, String afkorting, String afdeling) {
         super(bsn, voornaam, achternaam, geboortedatum, geslacht);
         setAfkorting(afkorting);
         setAfdeling(afdeling);
