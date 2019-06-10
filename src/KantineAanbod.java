@@ -29,7 +29,10 @@ public class KantineAanbod {
             aanbod.put(artikelnaam[i], artikelen);
         }
     }
-
+    /*Methode om voorraad aan te vullen.
+     *
+     * @param productnaam
+     *  */
     private void vulVoorraadAan(String productnaam){
     	ArrayList<Artikel> huidigeVoorraad = aanbod.get(productnaam);
     	int startHoeveelheid = startVoorraad.get(productnaam);
