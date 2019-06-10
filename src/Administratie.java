@@ -3,6 +3,12 @@ public class Administratie {
     private static final int DAYS_IN_WEEK = 7;
 
     /**
+     * Private constructor
+     * **/
+    private Administratie() {
+
+    }
+    /**
      * Deze methode berekent van de int array aantal de gemiddelde waarde
      *
      * @param aantal
