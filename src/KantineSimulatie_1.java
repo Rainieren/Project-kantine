@@ -1,4 +1,4 @@
-public class KantineSimulatie {
+public class KantineSimulatie_1 {
 
     private Kantine kantine;
 
@@ -7,7 +7,7 @@ public class KantineSimulatie {
     /**
      * Constructor
      */
-    public KantineSimulatie() {
+    public KantineSimulatie_1() {
 
         kantine = new Kantine();
     }
@@ -36,7 +36,9 @@ public class KantineSimulatie {
             // toon dagtotalen (artikelen en geld in kassa)
             Kassa kassa = kantine.getKassa();
 
-            kassa.hoeveelheidGeldInKassa();
+            System.out.println(kassa.hoeveelheidGeldInKassa());
+
+
             // reset de kassa voor de volgende dag
             kassa.resetKassa();
         }
@@ -54,7 +56,7 @@ public class KantineSimulatie {
             dagen = Integer.parseInt(args[0]);
         }
 
-        KantineSimulatie kantineSimulatie = new KantineSimulatie();
+        KantineSimulatie_2 kantineSimulatie = new KantineSimulatie_2();
         kantineSimulatie.simuleer(dagen);
     }
 }

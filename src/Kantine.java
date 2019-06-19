@@ -63,7 +63,7 @@ public class Kantine {
     /**
      *
      */
-    public void setKantineAanbod(){
+    public void setKantineAanbod(KantineAanbod kantineAanbod){
         this.kantineAanbod = kantineAanbod;
     }
 

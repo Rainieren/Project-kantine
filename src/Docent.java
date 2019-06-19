@@ -3,6 +3,8 @@ public class Docent extends Persoon {
     private String afkorting;
     private String afdeling;
 
+
+
     /**
      * Constructor
      *

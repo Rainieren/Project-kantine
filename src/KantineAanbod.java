@@ -29,7 +29,7 @@ public class KantineAanbod {
             aanbod.put(artikelnaam[i], artikelen);
         }
     }
-    /*Methode om voorraad aan te vullen.
+    /* Methode om voorraad aan te vullen.
      *
      * @param productnaam
      *  */
@@ -38,7 +38,7 @@ public class KantineAanbod {
     	int startHoeveelheid = startVoorraad.get(productnaam);
     	int huidigeHoeveelheid = huidigeVoorraad.size();
     	double prijs = prijzen.get(productnaam);
-        for(int j=huidigeHoeveelheid;j<startHoeveelheid;j++) 
+        for(int j = huidigeHoeveelheid; j < startHoeveelheid; j++)
         {
         	huidigeVoorraad.add(new Artikel(productnaam, prijs));
         }
@@ -71,7 +71,9 @@ public class KantineAanbod {
         {
             Artikel a = stapel.get(0);
             stapel.remove(0);
+
             if(stapel.size()<=10) vulVoorraadAan(a.getName());
+
             return a;
         }
     }

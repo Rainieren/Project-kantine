@@ -57,4 +57,5 @@ public class Kassa {
         this.totaalGepasseerdeArtikelen = 0;
         this.geldGepasseerd = 0;
     }
+
 }

@@ -3,6 +3,7 @@ public class Kantinemedewerker extends Persoon {
     private int medewerkersNummer;
     private boolean magKassa;
 
+
     /**
      * Constructor
      *
@@ -14,11 +15,15 @@ public class Kantinemedewerker extends Persoon {
      * @param medewerkersNummer
      * @param magKassa
      */
+
+
     public Kantinemedewerker(int bsn, String voornaam, String achternaam, Datum geboortedatum, char geslacht, int medewerkersNummer, boolean magKassa ) {
         super(bsn, voornaam, achternaam, geboortedatum, geslacht);
         setMedewerkersNummer(medewerkersNummer);
         setMagKassa(magKassa);
     }
+
+
 
 
     /**
