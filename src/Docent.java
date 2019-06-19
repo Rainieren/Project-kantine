@@ -1,4 +1,4 @@
-public class Docent extends Persoon {
+public class Docent extends Persoon implements KortingskaartHouder {
 
     private String afkorting;
     private String afdeling;
@@ -51,6 +51,30 @@ public class Docent extends Persoon {
      * @return afdeling*/
     public String getAfdeling(){
         return afdeling;
+    }
+
+    /**
+     * Geeft het kortingspercentage voor docenten.
+     * @return 25%.
+     */
+    public double geefKortingsPercentage() {
+        return 0.25;
+    }
+
+    /**
+     * Geeft aan dat de kortingskaart een maximum heeft.
+     * @return true
+     */
+    public boolean heeftMaximum() {
+        return true;
+    }
+
+    /**
+     * Geeft het maximale kortingsbedrag van deze kaart per bezoek
+     * @return 1 euro.
+     */
+    public double geefMaximum() {
+        return 1.00;
     }
 
 

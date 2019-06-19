@@ -22,8 +22,19 @@ public class Kassa {
     public void rekenAf(Dienblad klant) {
         // method body omitted
 
+        if (klant instanceof KortingskaartHouder) {
+            KortingskaartHouder kortingsKaartHouder = (KortingskaartHouder)klant;
+            double korting = kortingsKaartHouder.geefKortingsPercentage() * this.geldGepasseerd;
+            if (kortingsKaartHouder.heeftMaximum() && korting > kortingsKaartHouder.geefMaximum()) {
+                korting = kortingsKaartHouder.geefMaximum();
+            }
+            this.geldGepasseerd -= korting;
+        }
+
         this.totaalGepasseerdeArtikelen += klant.getAantalArtikelen();
         this.geldGepasseerd += klant.getTotaalPrijs();
+
+
 
     }
 

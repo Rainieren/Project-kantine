@@ -1,4 +1,4 @@
-public class Kantinemedewerker extends Persoon {
+public class Kantinemedewerker extends Persoon implements KortingskaartHouder {
 
     private int medewerkersNummer;
     private boolean magKassa;
@@ -59,6 +59,30 @@ public class Kantinemedewerker extends Persoon {
 
     public boolean getMagKassa(){
         return magKassa;
+    }
+
+    /**
+     * Geeft het kortingspercentage voor kantinemedewerkers.
+     * @return 35%.
+     */
+    public double geefKortingsPercentage() {
+        return 0.35;
+    }
+
+    /**
+     * Geeft aan dat de kortingskaart een maximum heeft.
+     * @return Nee.
+     */
+    public boolean heeftMaximum() {
+        return false;
+    }
+
+    /**
+     * Geeft het maximale kortingsbedrag per bezoek.
+     * @return 0.
+     */
+    public double geefMaximum() {
+        return 0.00;
     }
 
 
