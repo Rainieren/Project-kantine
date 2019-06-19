@@ -7,6 +7,7 @@ public abstract class Betaalwijze {
      * @param saldo
      */
     public void setSaldo(double saldo) {
+
         this.saldo = saldo;
     }
 

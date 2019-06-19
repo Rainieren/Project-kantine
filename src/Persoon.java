@@ -7,6 +7,7 @@ public class Persoon {
     private String achternaam;
     private Datum geboortedatum;
     private char geslacht;
+    private Betaalwijze betaalwijze;
 
     private Dienblad dienblad;
 
@@ -136,5 +137,22 @@ public class Persoon {
      */
     public void setVoornaam(String voornaam) {
         this.voornaam = voornaam;
+    }
+
+    /**
+     * Stel betaalwijze voor deze persoon in.
+     * @param betaalwijze De betaalwijze.
+     */
+    public void setBetaalwijze(Betaalwijze betaalwijze) {
+        this.betaalwijze = betaalwijze;
+    }
+
+
+    /**
+     * Geef de betaalwijze van deze persoon.
+     * @return De betaalwijze.
+     */
+    public Betaalwijze getBetaalwijze() {
+        return betaalwijze;
     }
 }
