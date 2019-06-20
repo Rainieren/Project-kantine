@@ -29,6 +29,10 @@ public class Dienblad {
         artikelen.push(artikel);
     }
 
+    public Persoon getKlant() {
+        return klant;
+    }
+
     /**
      * Methode om aantal artikelen op dienblad te tellen
      *

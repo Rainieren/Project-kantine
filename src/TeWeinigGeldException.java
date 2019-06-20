@@ -1,8 +1,14 @@
 public class TeWeinigGeldException extends Exception {
 
-    public TeWeinigGeldException(){}
+    public TeWeinigGeldException(){
+        System.out.println("Klant heeft te weinig geld");
+    }
 
-    public TeWeinigGeldException(Exception e){}
+    public TeWeinigGeldException(Exception e){
+        System.out.println("Klant heeft te weinig geld " + e);
+    }
 
-    public TeWeinigGeldException(String Message){}
+    public TeWeinigGeldException(String Message){
+        System.out.println(Message);
+    }
 }

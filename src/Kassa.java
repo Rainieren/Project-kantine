@@ -19,8 +19,9 @@ public class Kassa {
      *
      * @param klant die moet afrekenen
      */
-    public void rekenAf(Dienblad klant) {
+    public void rekenAf(Dienblad klant, Betaalwijze betaalwijze) {
         // method body omitted
+
 
         if (klant instanceof KortingskaartHouder) {
             KortingskaartHouder kortingsKaartHouder = (KortingskaartHouder)klant;
@@ -32,7 +33,14 @@ public class Kassa {
         }
 
         this.totaalGepasseerdeArtikelen += klant.getAantalArtikelen();
+        System.out.println("Er is betaald");
         this.geldGepasseerd += klant.getTotaalPrijs();
+
+        try {
+            betaalwijze.betaald(klant.getTotaalPrijs(), klant.getKlant());
+        } catch (TeWeinigGeldException e) {
+            System.out.println(e);
+        }
 
 
 
